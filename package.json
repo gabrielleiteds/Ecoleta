@@ -1,0 +1,8 @@
+{
+  "name": "Ecoleta",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/leiteGS/Ecoleta.git",
+  "author": "leitegs <leitedasilvag@gmail.com>",
+  "license": "MIT"
+}
