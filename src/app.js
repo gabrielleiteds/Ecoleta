@@ -22,4 +22,8 @@ app.get('/create-point', (req, res) => {
     res.render('create-point.html')
 })
 
+app.get('/search', (req, res) => {
+    res.render('search-results.html')
+})
+
 app.listen(3000);
