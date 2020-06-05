@@ -47,24 +47,25 @@ document.querySelector("select[name=uf]").addEventListener("change", getCities)
 //itens de coleta
 const itemsToCollect = document.querySelectorAll(".items-grid li");
 
-for(let item of itemsToCollect) 
+for(const item of itemsToCollect) 
 {
     item.addEventListener("click", handleSelectedItem); 
 }
 
-const collectedItems = document.querySelector("input[name=item]");
+const collectedItems = document.querySelector("input[name=items]");
 
 let selectedItems = []; 
 
 function handleSelectedItem(event) {
 
-    const itemLi = event.target; 
+    let itemLi = event.target; 
 
     //adicionar ou remover class 
     itemLi.classList.toggle("selected"); 
 
     const itemId = itemLi.dataset.id; 
 
+    console.log('itemid: ', itemId)
     //verificação se há itens selecionados
     //pegar itens
     const alreadySelected = selectedItems.findIndex((item) => {
@@ -86,6 +87,8 @@ function handleSelectedItem(event) {
     else {
         selectedItems.push(itemId)
     } 
+
+    console.log('selectedItems: ', selectedItems)
 
     //atualizar o campo com os itens selecionados
     collectedItems.value = selectedItems; 

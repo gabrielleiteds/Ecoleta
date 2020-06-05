@@ -44,12 +44,12 @@ db.serialize(() => {
     }
 
     //inserção de valor
-    db.run(query, values, insert);
+    //db.run(query, values, insert);
 
 
     //deletar usuario
 
-    db.run(`DELETE FROM places WHERE id = ?`, [1], function (err) {
+    db.run(`DELETE FROM places WHERE id = ?`, [3], function (err) {
         if (err) {
             return console.log(err)
         }
